@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS2YOU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <!-- <img src="./assets/logo.png" alt="brand"> -->
+                <h2 class="logo-heading">NEWS2<span class="you">YOU</span></h2>
+
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="world" onclick="onNavItemClick('world')">World</li>
+                    <li class="hover-link nav-item" id="sports+India" onclick="onNavItemClick('sports+India')">Sports</li>
+                    <li class="hover-link nav-item" id="education+India" onclick="onNavItemClick('education+India')">Education</li>
+                    <li class="hover-link nav-item" id="politics+India" onclick="onNavItemClick('politics+India')">Politics</li>
+                    <li class="hover-link nav-item" id="select-state" onclick="toggleDropdown()">Select State</li>
+                </ul>
+                <ul id="state-dropdown" class="dropdown-content">
+                    <li class="hover-link1 nav-item" id="AndhraPradesh" onclick="onNavItemClick('AndhraPradesh')">Andhra Pradesh</li>
+                    <li class="hover-link1 nav-item" id="ArunachalPradesh" onclick="onNavItemClick('ArunachalPradesh')">Arunachal Pradesh</li>
+                    <li class="hover-link1 nav-item" id="Assam" onclick="onNavItemClick('Assam')">Assam</li>
+                    <li class="hover-link1 nav-item" id="Bihar" onclick="onNavItemClick('Bihar')">Bihar</li>
+                    <li class="hover-link1 nav-item" id="Chhattisgarh" onclick="onNavItemClick('Chhattisgarh')">Chhattisgarh</li>
+                    <li class="hover-link1 nav-item" id="Goa" onclick="onNavItemClick('Goa')">Goa</li>
+                    <li class="hover-link1 nav-item" id="Gujarat" onclick="onNavItemClick('Gujarat')">Gujarat</li>
+                    <li class="hover-link1 nav-item" id="Haryana" onclick="onNavItemClick('Haryana')">Haryana</li>
+                    <li class="hover-link1 nav-item" id="HimachalPradesh" onclick="onNavItemClick('HimachalPradesh')">Himachal Pradesh</li>
+                    <li class="hover-link1 nav-item" id="Jharkhand" onclick="onNavItemClick('Jharkhand')">Jharkhand</li>
+                    <li class="hover-link1 nav-item" id="Karnataka" onclick="onNavItemClick('Karnataka')">Karnataka</li>
+                    <li class="hover-link1 nav-item" id="Kerala" onclick="onNavItemClick('Kerala')">Kerala</li>
+                    <li class="hover-link1 nav-item" id="MadhyaPradesh" onclick="onNavItemClick('MadhyaPradesh')">Madhya Pradesh</li>
+                    <li class="hover-link1 nav-item" id="Maharashtra" onclick="onNavItemClick('Maharashtra')">Maharashtra</li>
+                    <li class="hover-link1 nav-item" id="Manipur" onclick="onNavItemClick('Manipur')">Manipur</li>
+                    <li class="hover-link1 nav-item" id="Meghalaya" onclick="onNavItemClick('Meghalaya')">Meghalaya</li>
+                    <li class="hover-link1 nav-item" id="Mizoram" onclick="onNavItemClick('Mizoram')">Mizoram</li>
+                    <li class="hover-link1 nav-item" id="Nagaland" onclick="onNavItemClick('Nagaland')">Nagaland</li>
+                    <li class="hover-link1 nav-item" id="Odisha" onclick="onNavItemClick('Odisha')">Odisha</li>
+                    <li class="hover-link1 nav-item" id="Punjab" onclick="onNavItemClick('Punjab')">Punjab</li>
+                    <li class="hover-link1 nav-item" id="Rajasthan" onclick="onNavItemClick('Rajasthan')">Rajasthan</li>
+                    <li class="hover-link1 nav-item" id="Sikkim" onclick="onNavItemClick('Sikkim')">Sikkim</li>
+                    <li class="hover-link1 nav-item" id="TamilNadu" onclick="onNavItemClick('TamilNadu')">Tamil Nadu</li>
+                    <li class="hover-link1 nav-item" id="Telangana" onclick="onNavItemClick('Telangana')">Telangana</li>
+                    <li class="hover-link1 nav-item" id="Tripura" onclick="onNavItemClick('Tripura')">Tripura</li>
+                    <li class="hover-link1 nav-item" id="UttarPradesh" onclick="onNavItemClick('UttarPradesh')">Uttar Pradesh</li>
+                    <li class="hover-link1 nav-item" id="Uttarakhand" onclick="onNavItemClick('Uttarakhand')">Uttarakhand</li>
+                    <li class="hover-link1 nav-item" id="WestBengal" onclick="onNavItemClick('WestBengal')">West Bengal</li>
+
+                    
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Gta">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">Title of the news</h3>
+                <h6 class="news-source" id="news-source">content published date </h6>
+                <p class="news-desc" id="news-desc">Description of the news !</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html> 
